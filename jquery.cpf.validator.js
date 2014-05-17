@@ -1,7 +1,10 @@
+/*
+- Jquery CPF Validator
+- Author: @the_programer
+- Gihub: https://github.com/theprogramer/jquery-cpf-validator
+*/
 jQuery.validator.addMethod("cpf", function(value, element) {
-  value = value.replace('.','');
-  value = value.replace('.','');
-  cpf = value.replace('-','');
+  cpf = value.replace(/\D/g, '');
   while(cpf.length < 11) cpf = "0"+ cpf;
   var expReg = /^0+$|^1+$|^2+$|^3+$|^4+$|^5+$|^6+$|^7+$|^8+$|^9+$/;
   var a = [];
